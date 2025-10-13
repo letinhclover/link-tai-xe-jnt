@@ -1,135 +1,149 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINK TÀI XẾ J&T</title>
-<style>
-  :root {
-    --bg-light: #f0f8ff;
-    --bg-dark: #121212;
-    --text-light: #000;
-    --text-dark: #fff;
-    --card-light: #fff;
-    --card-dark: #1e1e1e;
-    --green: #4caf50;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINK TÀI XẾ J&T</title>
 
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: 0.3s;
-  }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png">
 
-  body.dark {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-  }
+  <!-- Meta mô tả và chia sẻ -->
+  <meta name="description" content="Tổng hợp các liên kết nội bộ dành cho tài xế J&T.">
+  <meta property="og:title" content="LINK TÀI XẾ J&T">
+  <meta property="og:description" content="Trang tổng hợp link chấm công, báo cáo, đăng ký nghỉ, kiểm tra xe... dành cho tài xế J&T.">
+  <meta property="og:image" content="https://letinhclover.github.io/link-tai-xe-jnt/icon.png">
+  <meta property="og:url" content="https://letinhclover.github.io/link-tai-xe-jnt/">
+  <meta name="theme-color" content="#dd2476">
 
-  header {
-    position: relative;
-    padding: 15px 20px;
-    text-align: center;
-  }
+  <style>
+    :root {
+      --bg-light: #f0f8ff;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #fff;
+      --card-light: #fff;
+      --card-dark: #1e1e1e;
+      --green: #4caf50;
+      --gradient: linear-gradient(45deg, #ff512f, #dd2476);
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 1.8em;
-    font-weight: 900;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #ff512f, #dd2476);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s;
+    }
 
-  #toggleTheme {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: inherit;
-  }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
 
-  .container {
-    flex: 1;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px 20px 20px 20px;
-  }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 15px 20px;
+    }
 
-  a.link-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    background-color: var(--card-light);
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 12px;
-    font-weight: bold;
-    transition: 0.2s;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: 900;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-  body.dark a.link-card {
-    background-color: var(--card-dark);
-  }
+    #toggleTheme {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+    }
 
-  a.link-card:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
+    .container {
+      flex: 1;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px 20px 20px 20px;
+    }
 
-  .copy-btn {
-    font-size: 1.2em;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: transform 0.2s;
-    color: var(--green);
-  }
+    a.link-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      background-color: var(--card-light);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      transition: 0.2s;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
 
-  .copy-btn:active {
-    transform: scale(1.3);
-  }
+    body.dark a.link-card {
+      background-color: var(--card-dark);
+    }
 
-  footer {
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.95em;
-    background-color: var(--card-light);
-    color: var(--text-light);
-    line-height: 1.6;
-    transition: 0.3s;
-  }
+    a.link-card:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
 
-  body.dark footer {
-    background-color: var(--card-dark);
-    color: var(--text-dark);
-  }
+    .copy-btn {
+      font-size: 1.2em;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+      color: var(--green);
+    }
 
-  footer a {
-    color: #25D366;
-    font-weight: bold;
-    text-decoration: none;
-  }
+    .copy-btn:active {
+      transform: scale(1.3);
+    }
 
-  @media (max-width: 480px){
-    header h1 { font-size: 1.5em; }
-    a.link-card { font-size: 1em; padding: 12px; }
-  }
-</style>
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.95em;
+      background-color: var(--card-light);
+      color: var(--text-light);
+      line-height: 1.6;
+      transition: 0.3s;
+    }
+
+    body.dark footer {
+      background-color: var(--card-dark);
+      color: var(--text-dark);
+    }
+
+    footer a {
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px){
+      header h1 { font-size: 1.5em; }
+      a.link-card { font-size: 1em; padding: 12px; }
+    }
+  </style>
 </head>
+
 <body>
 <header>
   <h1>LINK TÀI XẾ J&T</h1>
