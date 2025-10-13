@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINK TÀI XẾ J&T</title>
+<style>
+  :root {
+    --bg-light: #f0f8ff;
+    --bg-dark: #121212;
+    --text-light: #000;
+    --text-dark: #fff;
+    --card-light: #fff;
+    --card-dark: #1e1e1e;
+    --green: #4caf50;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.3s;
+  }
+
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  header {
+    position: relative;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #toggleTheme {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  .container {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 20px 20px 20px;
+  }
+
+  a.link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--card-light);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  body.dark a.link-card {
+    background-color: var(--card-dark);
+  }
+
+  a.link-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .copy-btn {
+    font-size: 1.2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: var(--green);
+  }
+
+  .copy-btn:active {
+    transform: scale(1.3);
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.95em;
+    background-color: var(--card-light);
+    color: var(--text-light);
+    line-height: 1.6;
+    transition: 0.3s;
+  }
+
+  body.dark footer {
+    background-color: var(--card-dark);
+    color: var(--text-dark);
+  }
+
+  footer a {
+    color: #25D366;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px){
+    header h1 { font-size: 1.5em; }
+    a.link-card { font-size: 1em; padding: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>LINK TÀI XẾ J&T</h1>
+  <button id="toggleTheme">🌙</button>
+</header>
+
+<div class="container" id="links">
+  <a href="https://jntexpress.vn/attendance" target="_blank" class="link-card">
+    <span>CHẤM CÔNG CRM</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jntexpress.vn/attendance')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgwao5eoTslB2Ds1auT05WPg" target="_blank" class="link-card">
+    <span>BÁO CÁO HÀNH TRÌNH</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgwao5eoTslB2Ds1auT05WPg')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgwwFr50osovPX8c5EuYkpVe" target="_blank" class="link-card">
+    <span>ĐIỀN THÔNG TIN TĂNG CA</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgwwFr50osovPX8c5EuYkpVe')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgeJOb7CxaLL18zxNj6gz1kd" target="_blank" class="link-card">
+    <span>ĐĂNG KÍ NGHỈ PHÉP</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgeJOb7CxaLL18zxNj6gz1kd')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgcx3ZWJlUeZ007y7NOMDtAf" target="_blank" class="link-card">
+    <span>KIỂM TRA XE HẰNG NGÀY</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgcx3ZWJlUeZ007y7NOMDtAf')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlg4jTyiyUBTxoWnXnh3E2jVh" target="_blank" class="link-card">
+    <span>KHÔNG BẤM APP ĐƯỢC</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlg4jTyiyUBTxoWnXnh3E2jVh')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgajLtpG68WY3Kgux9cASwcd" target="_blank" class="link-card">
+    <span>GỬI HÌNH VÁ VỎ</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgajLtpG68WY3Kgux9cASwcd')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgj3VYEKTEh7tTSaZvfpP7HL" target="_blank" class="link-card">
+    <span>BÁO CÁO THÙNG XE TRỐNG</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgj3VYEKTEh7tTSaZvfpP7HL')">📋</button>
+  </a>
+
+  <a href="https://jtexpress.sg.feishu.cn/share/base/form/shrlgHKbeP4ff2P8AoaQcWUzicc" target="_blank" class="link-card">
+    <span>THÔNG TIN ĐỔ DẦU</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://jtexpress.sg.feishu.cn/share/base/form/shrlgHKbeP4ff2P8AoaQcWUzicc')">📋</button>
+  </a>
+
+  <a href="https://driver.jtexpress.vn/#/login" target="_blank" class="link-card">
+    <span>APP NHIỆM VỤ</span>
+    <button class="copy-btn" onclick="copyText(event, 'https://driver.jtexpress.vn/#/login')">📋</button>
+  </a>
+</div>
+
+<footer>
+  <div>
+    <a href="https://zalo.me/0708312789" target="_blank">© 2025 Lê Tỉnh</a>
+  </div>
+  <div style="margin-top:5px; font-style:italic;">Trang này chỉ dành cho nội bộ tài xế J&T</div>
+  <div style="margin-top:5px; font-weight:bold; color:#ff4500;">Nếu thấy hữu ích hãy chia sẻ nó nhé!</div>
+</footer>
+
+<script>
+function copyText(e, text) {
+  e.preventDefault();
+  e.stopPropagation();
+  const input = document.createElement("input");
+  input.value = text;
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+  alert("Đã copy link: " + text);
+}
+
+document.getElementById("toggleTheme").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.getElementById("toggleTheme").textContent =
+    document.body.classList.contains("dark") ? "☀" : "🌙";
+});
+</script>
+</body>
+</html>
